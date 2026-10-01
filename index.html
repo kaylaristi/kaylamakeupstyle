@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glow & Grace | Makeup Blog</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Georgia", serif;
+            background-color: #f8f0e5;
+            color: #4b3621;
+            line-height: 1.7;
+        }
+
+        /* NAVBAR */
+        header {
+            background-color: #fffaf3;
+            border-bottom: 1px solid #dfcdb8;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #6b4226;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #5b4028;
+            margin-left: 25px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a66a3f;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 8%;
+            gap: 50px;
+            background: linear-gradient(
+                135deg,
+                #f8eee2,
+                #ead8c3
+            );
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero-text small {
+            color: #a66a3f;
+            font-size: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            margin: 18px 0;
+            color: #5a3823;
+        }
+
+        .hero-text p {
+            font-family: Arial, sans-serif;
+            color: #6e5845;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #70452c;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #a66a3f;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            width: 380px;
+            height: 450px;
+            border-radius: 200px 200px 20px 20px;
+            background-image: url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=80");
+            background-size: cover;
+            background-position: center;
+            box-shadow: 15px 15px 0 #c7a98b;
+        }
+
+        /* SECTION */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #5a3823;
+        }
+
+        .section-title p {
+            color: #8a725e;
+            font-family: Arial, sans-serif;
+            margin-top: 8px;
+        }
+
+        /* BLOG CARDS */
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #fffaf4;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(91, 64, 40, 0.12);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image1 {
+            background-image: url("https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=700&q=80");
+        }
+
+        .image2 {
+            background-image: url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80");
+        }
+
+        .image3 {
+            background-image: url("https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=700&q=80");
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content span {
+            color: #a66a3f;
+            font-size: 13px;
+            font-family: Arial, sans-serif;
+        }
+
+        .card-content h3 {
+            margin: 8px 0;
+            color: #5a3823;
+            font-size: 22px;
+        }
+
+        .card-content p {
+            color: #756352;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #8a5736;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        /* ABOUT */
+        .about {
+            background-color: #e8d5bf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .about
